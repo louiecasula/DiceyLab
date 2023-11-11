@@ -10,6 +10,14 @@ public class Bins {
         this.possibleValues = new int[max - min  + 1];
     }
 
+    public int getMin(){
+        return this.min;
+    }
+
+    public int getMax(){
+        return this.max;
+    }
+
     public int getBin(int binNumber) {
         return this.possibleValues[binNumber - this.min];
     }
