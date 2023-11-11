@@ -27,11 +27,7 @@ public class Simulation {
         for (int i = numberOfDice; i <= numberOfDice * 6; i++) {
             int totalRolls = bins.getBin(i);
             float frequency = (float) totalRolls / numberOfTosses;
-            StringBuilder sb = new StringBuilder();
-            for (int j = 1; j < frequency * 100; j++) {
-                sb.append("*");
-            }
-            String asterisk = sb.toString();
+            String asterisk = "*".repeat((int) (frequency * 100));
             System.out.printf("%2d : %,9d: %.2f %s\n", i, totalRolls, frequency, asterisk);
         }
     }
